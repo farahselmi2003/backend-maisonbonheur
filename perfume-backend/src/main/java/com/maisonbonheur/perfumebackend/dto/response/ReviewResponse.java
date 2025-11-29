@@ -11,11 +11,21 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserResponse {
+public class ReviewResponse {
     private Long id;
-    private String email;
+    private Long perfumeId;
+    private UserReviewResponse user;
+    private Integer rating;
+    private String comment;
+    private LocalDateTime createdAt;
+}
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+class UserReviewResponse {
+    private Long id;
     private String firstName;
     private String lastName;
-    private String address;
-    private LocalDateTime createdAt;
 }
